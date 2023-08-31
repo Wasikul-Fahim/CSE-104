@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int main (void)
@@ -7,12 +8,12 @@ int main (void)
     printf("size of array : ");
     scanf("%d", &size);
 
-    printf("Marks : ");
+    printf("Array : ");
     for(i = 0; i < size; i++)
     {
         scanf("%d", &mark[i]);
     }
-    
+
     printf("Position of insertion : ");
     scanf("%d", &pos);
 
@@ -28,9 +29,8 @@ int main (void)
 
     for(i = 0; i < size; i++)
     {
-        printf("%d = %d\n", i, mark[i]);
+        printf("%d ", mark[i]);
     }
-
-
+    printf("\n");
 
 }
