@@ -14,7 +14,6 @@ int main (void)
     }
 
     printf("Position of deleted element : ");
-    scanf("%d", &pos);
 
 
     for (i = pos - 1; i <= size; i++)
