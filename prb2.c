@@ -1,18 +1,40 @@
 #include <stdio.h>
 
-int main(void)
+int fact(int num);
+
+int main (void)
 {
-    int a = 2, b = 5;
-    int *p1 = &a, *p2 = &b;
+    int n;
+    printf("Size of Array : ");
+    scanf("%d", &n);
 
-    printf("Before swap, A = %d & B = %d\n", *p1, *p2);
+    int nums[n];
 
-    *p1 = *p1 + *p2;
-    *p2 = *p1 - *p2;
-    *p1 = *p1 - *p2;
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &nums[i]);
+        int o = fact(nums[i]);
+        nums[i] = o;
+    }
 
-    printf("After swap, A = %d & B = %d\n", *p1, *p2);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", nums[i]);
+    }
 
 
-    return 0;
+}
+
+int fact(int num)
+{
+    if(num == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        int sum = num * fact(num - 1);
+        return sum;
+    }
+
 }

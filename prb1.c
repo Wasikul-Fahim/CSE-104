@@ -1,27 +1,31 @@
-#include<stdio.h>
+#include <stdio.h>
 
+int total_up (char * inp);
 
-int main()
+int main (void)
 {
-   int a;
-   scanf("%d", &a);
+    char inp[100];
+    printf("Input : ");
+    scanf("%s", &inp);
 
-   int nums[a];
+    int n = total_up(inp);
 
-   int *p;
+    printf("%d uppercase letters\n", n);
 
-
-
-   for(int i = 0; i < a; i++)
-   {
-       scanf("%d", &nums[i]);
-       p = &nums[i];
-       printf("%d %p\n", *p, p);
-
-   }
+    return 0;
+}
 
 
-
-
-  return 0;
+int total_up (char * inp)
+{
+    int i = 0, num = 0;
+    while(inp[i] != '\0')
+    {
+        if(inp[i] >= 'A' && inp[i] <= 'Z')
+        {
+            num++;
+        }
+        i++;
+    }
+    return num;
 }
